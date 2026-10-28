@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 761274183757535917, guid: 4eacd2e604ee88f4b85651cf55d6f852, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7788126639005370423, guid: 4eacd2e604ee88f4b85651cf55d6f852, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -105,9 +109,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c754663af3e7824095bb303ea2d8893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  cam: {fileID: 0}
   moveSpeed: 4
   jumpHeight: 2
   turnSpeed: 10
   gravityScale: 2
   fallingGravityScale: 3
   gravityValue: 9.81
+  canMove: 1
+  canJump: 1

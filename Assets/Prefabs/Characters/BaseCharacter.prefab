@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7788126639005370423}
   - component: {fileID: 7913139679633550788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BaseCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 2715980142231786468}
   - component: {fileID: 6092545365694255182}
   - component: {fileID: 5906624010096742486}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 1520561449222124289}
   - component: {fileID: 8196429339251157552}
   - component: {fileID: 9010837599922739221}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlacehoderEye(RemoveWhenArtPolished)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
