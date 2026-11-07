@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/BrunoScenes/MovementScene.unity.meta
 guid: b60de30e764b0724f82ecba669588e2f
+========
+guid: b44a862e9adda4040aa13c6b79bdc569
+>>>>>>>> origin/zabian:Assets/Scenes/Game Levels/lvl_Maze.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
