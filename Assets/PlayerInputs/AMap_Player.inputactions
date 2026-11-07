@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "ia_player",
+    "name": "AMap_Player",
     "maps": [
         {
             "name": "Gameplay",
@@ -16,9 +16,27 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "427da787-3dea-4ae9-8f3f-c6c4dfe1d7d7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "4d5a2d4b-cc9e-4d74-8499-4847a1722d25",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Fastfall",
+                    "type": "Button",
+                    "id": "4a0fd803-bf35-4dce-bdee-d80d718c68ed",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -98,6 +116,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68193cec-8a70-4047-a13b-f17bb1236710",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64740526-05d9-46cf-a0fe-58b0360fafdb",
+                    "path": "<Keyboard>/leftCtrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fastfall",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

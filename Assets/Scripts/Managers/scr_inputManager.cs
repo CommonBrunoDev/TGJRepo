@@ -7,6 +7,8 @@ public class InputManager : Singleton<InputManager>
     public Vector2 MoveInput => _inputs.Gameplay.Movement.ReadValue<Vector2>();
     public Vector2 LookInput => _inputs.Gameplay.CameraLook.ReadValue<Vector2>();
     public bool JumpInput => _inputs.Gameplay.Jump.WasPressedThisFrame();
+    public bool FastfallInput => _inputs.Gameplay.Jump.IsPressed();
+    public bool SprintInput => _inputs.Gameplay.Jump.IsPressed();
 
     protected override void Awake() 
     {
