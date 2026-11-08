@@ -136,6 +136,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""StartStopMusic"",
+                    ""type"": ""Button"",
+                    ""id"": ""1bd8c84e-c99d-4ae6-81b2-a50a13f67eb8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -237,6 +246,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""CameraLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60c5c6d5-05e5-4307-a241-172ece66e64f"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartStopMusic"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -250,6 +270,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Fastfall = m_Gameplay.FindAction("Fastfall", throwIfNotFound: true);
         m_Gameplay_CameraLook = m_Gameplay.FindAction("CameraLook", throwIfNotFound: true);
+        m_Gameplay_StartStopMusic = m_Gameplay.FindAction("StartStopMusic", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -335,6 +356,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Fastfall;
     private readonly InputAction m_Gameplay_CameraLook;
+    private readonly InputAction m_Gameplay_StartStopMusic;
     /// <summary>
     /// Provides access to input actions defined in input action map "Gameplay".
     /// </summary>
@@ -366,6 +388,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Gameplay/CameraLook".
         /// </summary>
         public InputAction @CameraLook => m_Wrapper.m_Gameplay_CameraLook;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/StartStopMusic".
+        /// </summary>
+        public InputAction @StartStopMusic => m_Wrapper.m_Gameplay_StartStopMusic;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -407,6 +433,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @CameraLook.started += instance.OnCameraLook;
             @CameraLook.performed += instance.OnCameraLook;
             @CameraLook.canceled += instance.OnCameraLook;
+            @StartStopMusic.started += instance.OnStartStopMusic;
+            @StartStopMusic.performed += instance.OnStartStopMusic;
+            @StartStopMusic.canceled += instance.OnStartStopMusic;
         }
 
         /// <summary>
@@ -433,6 +462,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @CameraLook.started -= instance.OnCameraLook;
             @CameraLook.performed -= instance.OnCameraLook;
             @CameraLook.canceled -= instance.OnCameraLook;
+            @StartStopMusic.started -= instance.OnStartStopMusic;
+            @StartStopMusic.performed -= instance.OnStartStopMusic;
+            @StartStopMusic.canceled -= instance.OnStartStopMusic;
         }
 
         /// <summary>
@@ -508,5 +540,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCameraLook(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "StartStopMusic" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStartStopMusic(InputAction.CallbackContext context);
     }
 }

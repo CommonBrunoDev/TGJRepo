@@ -9,6 +9,7 @@ public class InputManager : Singleton<InputManager>
     public bool JumpInput => _inputs.Gameplay.Jump.WasPressedThisFrame();
     public bool FastfallInput => _inputs.Gameplay.Jump.IsPressed();
     public bool SprintInput => _inputs.Gameplay.Jump.IsPressed();
+    public bool StartStopMusic => _inputs.Gameplay.Jump.WasPressedThisFrame();
 
     protected override void Awake() 
     {
